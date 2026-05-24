@@ -1,2 +1,2 @@
 Hello Git
-Feature2 changes
+Feature2 changes and Feature1 changes
