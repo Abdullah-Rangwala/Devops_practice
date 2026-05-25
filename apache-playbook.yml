@@ -1,0 +1,17 @@
+- name: Install andstart Apache
+  hosts: web
+  become: yes
+
+  tasks:
+      - name: Install Apache
+        apt:
+          name: apache2
+          state: present
+          update_cache: yes
+
+      - name: Start Apache Server
+        service:
+          name: apache2
+          state: started
+          enables: yes
+
