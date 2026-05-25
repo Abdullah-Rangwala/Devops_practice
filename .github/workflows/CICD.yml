@@ -12,7 +12,13 @@ jobs:
     steps: 
     - uses: actions/checkout@v4
 
-    - name: Deploy
-      run: echo "Deploying Website..."
+    - name: Upload Pages Artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+
+    - name: Deploy to Github Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
 
 
